@@ -1,4 +1,6 @@
 import video from "../data/video.js";
+import Desciption from "./Desciption.js";
+import Title from "./Title.jsx";
 
 function App() {
   console.log("Here's your data:", video);
@@ -13,6 +15,12 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Title
+        title={video.title}
+        views={video.views}
+        createdAt={video.createdAt}
+      />
+      <Desciption data={video} />
     </div>
   );
 }
